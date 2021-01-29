@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, 	#23917b,#23917b, #068e3d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  /* background: white; */
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(1.5rem);
+}
+
+.circleTop {
+
+background: white;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+
+height:  15rem;
+width:  15rem;
+border-radius: 50%;
+
+  position: absolute;
+  top: 5%;
+  left: 15%
+}
+
+.circleBottom {
+
+background: white;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+
+height:  20rem;
+width:  20rem;
+border-radius: 50%;
+
+  position: absolute;
+  top: 60%;
+  left: 75%
+
+}
