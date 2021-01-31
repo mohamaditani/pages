@@ -4,10 +4,14 @@
   box-sizing: border-box;
   cursor: none;
   overflow: hidden;
+
+  user-select: none
 }
 
 body{
+	color: #383838;
   background-color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 main {
 /* min-width: 100vh; */
@@ -45,7 +49,7 @@ border-radius: 50%;
 
   position: absolute;
   top: 5%;
-  left: 15%
+  left: 15%;
 }
 
 .circleBottom {
@@ -59,7 +63,7 @@ border-radius: 50%;
 
   position: absolute;
   top: 60%;
-  left: 75%
+  left: 75%;
 
 }
 
@@ -67,8 +71,9 @@ border-radius: 50%;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  background: linear-gradient(to left top, rgba(255, 0, 0, 0.9), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to left top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
   position: absolute;
+  pointer-events: none;
 
   top: 0;
   left: 0 ;
@@ -91,6 +96,9 @@ border-radius: 50%;
 
 }
 
+.links{
+  color: 	#00664d;
+}
 .link{
   display: flex;
   margin: 2rem, 0rem;
@@ -100,22 +108,38 @@ border-radius: 50%;
 
 .link h2{
 padding: 0rem 2rem;
+font-size: 1.2rem;
+transition: font-size .1s ease-in-out;
+}
+
+.link h2:hover{
+  font-size: 1.5rem;
 }
 
 .box{
-  background: linear-gradient(to right bottom, rgba(35, 145, 123, 0.6),rgba(6, 142, 61, 0.6), rgba(6, 142, 61, 0.6));
+  /* background: linear-gradient(to right bottom, rgba(35, 145, 123, 0.6),rgba(6, 142, 61, 0.6), rgba(6, 142, 61, 0.6)); */
+  background-color: rgba(6, 142, 61, 0.6);
   height: inherit;
   width: inherit;
   border-radius: 2rem;
   color: white;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+
+  transition: padding .3s ease-in-out, background-color 0.5s ease-in-out;
+}
+.box h3{
+  padding: 0rem 1rem;
 }
 
+.box:hover{
+  padding: 2rem 2.7rem;
+  background-color: rgba(0, 204, 122, 0.7);
 
-
-.about{
-  flex: 2;
+/* transform: scale(1.1); */
 }
+
 
 
 img{
@@ -126,4 +150,45 @@ img{
 .link img{
   height: 50px;
   width: 50px;
+}
+
+/* section 2  (about)*/
+
+.about{
+  flex: 2;
+}
+
+.status{
+  margin-bottom: 3rem;
+}
+
+.status h1{
+font-size: 3rem;
+font-weight: 600;
+position: relative;
+text-align: center;
+margin-top: 2rem;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.cards{
+  padding: 3rem;
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+
+  padding: 2rem;
+  margin: 2rem 0;
+
+  border-radius: 2rem 0.5rem;
+  box-shadow: 2px 2px 10px;
 }
