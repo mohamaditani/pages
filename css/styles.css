@@ -2,20 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
+body{
+  background-color: black;
+}
 main {
+/* min-width: 100vh; */
   min-height: 100vh;
   background: linear-gradient(to right top, 	#23917b,#23917b, #068e3d);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 2rem;
 }
 
 .glass {
-  /* background: white; */
+
+  /* position: absolute; */
+  /* min-width: 80vh; */
   min-height: 80vh;
   width: 60%;
+
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
   border-radius: 2rem;
   z-index: 2;
@@ -49,4 +58,17 @@ border-radius: 50%;
   top: 60%;
   left: 75%
 
+}
+
+.ball{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(to left top, rgba(255, 0, 0, 0.9), rgba(255, 255, 255, 0.4));
+  position: absolute;
+
+  top: 0;
+  left: 0 ;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 }
